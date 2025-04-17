@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redmi 13C 5G - Zone</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --header-bg: #007bff;
+      --link-color: #ffffff;
+      --card-bg: #f9f9f9;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #f1f1f1;
+      --header-bg: #1e1e1e;
+      --link-color: #ffffff;
+      --card-bg: #1e1e1e;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header a {
+      color: var(--link-color);
+      text-decoration: none;
+      font-weight: bold;
+      background-color: transparent;
+      border: 2px solid white;
+      padding: 6px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    header a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-top: 2rem;
+    }
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      margin: 0 auto 1.5rem;
+      border-radius: 10px;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+      line-height: 1.8;
+    }
+
+    p {
+      font-size: 1.2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .theme-toggle {
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-left: 1rem;
+    }
+
+    body.dark .theme-toggle {
+      background-color: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Redmi 13C 5G</h1>
+    <div style="display: flex; align-items: center;">
+      <a href="smartphones.html">Back to Smartphones</a>
+      <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+  </header>
+
+  <main>
+    <img src="https://i05.appmifile.com/408_item_uk/03/09/2024/7de740d1d0da99cc0cac7c4c655bef00.png" alt="Redmi 13C 5G" />
+    <h2>Specifications</h2>
+    <ul>
+      <li>6.74” HD+ display</li>
+      <li>MediaTek Dimensity 6100+</li>
+      <li>5000mAh battery</li>
+      <li>128GB Storage</li>
+    </ul>
+    <p><strong>Price:</strong> ₹10,999</p>
+  </main>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    }
+  </script>
+
+</body>
+</html>

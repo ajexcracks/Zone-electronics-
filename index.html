@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zone - Electronics Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" onclick="toggleTheme()"> Theme</button>
+
+  <!-- Header -->
+  <header class="title">
+    
+    <div class="button-group">
+  <a href="index.html" class="nav-button">Home</a>
+  <a href="help.html" class="nav-button">Help</a>
+  <a href="contact.html" class="nav-button">Contact</a>
+  <a href="about.html" class="nav-button">About</a>
+  <a href="settings.html" class="settings-button">Settings</a>
+</div>
+  </header>
+
+  <!-- Search Section -->
+  <section class="search-section">
+    <input type="text" id="search" placeholder="Search products..." />
+    <button onclick="searchProducts()">Search</button>
+  </section>
+
+  <!-- Intro Text -->
+  <p class="intro-text">All types of electronics available</p>
+
+  <!-- Product List -->
+  <section class="product-list">
+    <div class="product-card">
+  <a href="smartphones.html">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgRQXq6VJvQZ8FXAabrY9EWKtkr_ezUgjRb6HERylAiFAVR0qKxrg6UrdE&s=10" alt="Smartphone" />
+  </a>
+  <h3>Smartphone</h3>
+  <p>High-performance Android device with 128GB storage.</p>
+</div>
+    <div class="product-card">
+      <a href="laptops.html">
+  <img src="https://m.media-amazon.com/images/I/71TPda7cwUL._AC_UY327_FMwebp_QL65_.jpg" 
+       alt="View Laptops" 
+       style="width: 300px; border-radius: 10px; transition: transform 0.3s;"
+       onmouseover="this.style.transform='scale(1.05)'" 
+       onmouseout="this.style.transform='scale(1)'">
+</a>
+      <h3>Laptop</h3>
+      <p>15.6" Full HD, Intel i7, 16GB RAM, 512GB SSD.</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPdFkuSCgG5-J2aIk3WQn03dlR4K8KsLqFWmp5GjAO_Y-UeNWyRKp4XP8&s=10" alt="Earbuds" />
+      <h3>Wireless Earbuds</h3>
+      <p>Noise cancellation, 24hr battery, Bluetooth 5.2.</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9pVpiLO_sukanadYQ8yurNE3sLOzsZtynxI4VA8xg9DfCk-lpO73R_-Q2&s=10" alt="Smartwatch" />
+      <h3>Smartwatch</h3>
+      <p>Track your fitness, heart rate, and notifications.</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS89v3lFbGFiIIxZQWxJgRJliC6oROBHw-ELg2ILYMlEFOcBBMRPc4r5-w&s=10" alt="Speaker" />
+      <h3>Bluetooth Speaker</h3>
+      <p>Portable, waterproof, 10 hours playtime.</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvkmAA44JhhafmchK8AEwkNw3OR2M02ku_EAp_t9XZ5ZXkbpNCB28J070&s=10" alt="TV" />
+      <h3>4K Smart TV</h3>
+      <p>55" Ultra HD with built-in streaming apps.</p>
+    </div>
+    <div class="product-card">
+      <img src="https://www.sony.co.in/image/83e724c6b5df327fc96f9c05d3ccc2ce?fmt=jpeg&wid=1200&qlt=43" alt="Console" />
+      <h3>Gaming Console</h3>
+      <p>Next-gen console with 1TB storage and 4K graphics.</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLBstZ_DRcRPuKX_VstzpymWneYYpCpO_Os-l9VRxgW6p4o8QATHvPkaAu&s=10" alt="Camera" />
+      <h3>Digital Camera</h3>
+      <p>24MP DSLR with Wi-Fi & 18-55mm lens kit.</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBltyXuUeROgqW7mXGKFvdOlrRS0NA3N2-TtOoJjq9EYZUAXEiP9zCraY&s=10" alt="Shaver" />
+      <h3>Electric Shaver</h3>
+      <p>Rechargeable with waterproof body and LED display.</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEnXTz4oz5FUlyprYuN2lshXCVV3n_hmADw4ijwBSk_Gl-mgSrHLmU5Kpj&s=10" alt="Power Bank" />
+      <h3>Power Bank</h3>
+      <p>20,000mAh fast charging with USB-C and micro-USB ports.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Zone | All rights reserved</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function searchProducts() {
+      const input = document.getElementById('search').value.toLowerCase();
+      const cards = document.querySelectorAll('.product-card');
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? 'block' : 'none';
+      });
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    window.onload = () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark');
+      }
+    };
+  </script>
+</body>
+</html>

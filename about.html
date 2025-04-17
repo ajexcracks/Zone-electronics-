@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About - Zone</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --header-bg: #007bff;
+      --footer-bg: #f1f1f1;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #f1f1f1;
+      --header-bg: #1e1e1e;
+      --footer-bg: #1a1a1a;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+   .button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px auto;
+  flex-wrap: wrap;
+}
+
+.nav-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+body.dark .nav-button {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark .nav-button:hover {
+  background-color: #555;
+}
+    }
+
+    .theme-toggle {
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .theme-toggle:hover {
+      background-color: #ddd;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--footer-bg);
+      color: var(--text-color);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>About</h1>
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <nav class="navigation">
+        <div class="button-group">
+  <a href="index.html" class="nav-button">Home</a>
+  <a href="help.html" class="nav-button">Help</a>
+  <a href="contact.html" class="nav-button">Contact</a>
+  <a href="about.html" class="nav-button">About</a>
+</div>
+      </nav>
+      <button class="theme-toggle" onclick="toggleTheme()"> Theme</button>
+    </div>
+  </header>
+
+  <main>
+    <h2>About Zone Electronics</h2>
+    <p>
+      Zone is your one-stop destination for the latest and greatest in electronics. We offer a wide range of products including smartphones, laptops, smartwatches, cameras, smart TVs, gaming consoles, and much more.
+    </p>
+    <p>
+      Our mission is to provide high-quality gadgets at affordable prices with a focus on customer satisfaction. At Zone, you’ll find the best deals, trusted brands, and expert service.
+    </p>
+  </main>
+
+  <footer>
+    <p>© 2025 Zone | All rights reserved</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!-- laptops.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Laptops - Zone</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --header-bg: #007bff;
+      --footer-bg: #f1f1f1;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #f1f1f1;
+      --header-bg: #1e1e1e;
+      --footer-bg: #1a1a1a;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navigation a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+
+    .theme-toggle {
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .product-card {
+      background-color: var(--bg-color);
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 250px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: contain;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--footer-bg);
+    }
+  </style>
+</head>
+<body class="dark"> <!-- Apply dark theme by default -->
+
+  <header>
+    <h1>Laptops</h1>
+    <div>
+      <nav class="navigation">
+        <div class="button-group">
+          <a href="index.html" class="nav-button">Home</a>
+          <a href="help.html" class="nav-button">Help</a>
+          <a href="contact.html" class="nav-button">Contact</a>
+          <a href="about.html" class="nav-button">About</a>
+        </div>
+      </nav>
+      <button class="theme-toggle" onclick="toggleTheme()">Theme</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="product-list">
+      <div class="product-card">
+        <a href="https://www.hp.com" target="_blank">
+          <img src="https://m.media-amazon.com/images/I/71TPda7cwUL._AC_UY327_FMwebp_QL65_.jpg" alt="HP 15s Ryzen 5" />
+        </a>
+        <h3>HP 15s Ryzen 5</h3>
+        <p>8GB RAM, 512GB SSD, 15.6” FHD, Win 11</p>
+        <p><strong>₹43,990</strong></p>
+      </div>
+      <div class="product-card">
+        <a href="https://www.dell.com" target="_blank">
+          <img src="https://m.media-amazon.com/images/I/61Dw5Z8LzJL._AC_UY327_FMwebp_QL65_.jpg" alt="Dell Inspiron 15" />
+        </a>
+        <h3>Dell Inspiron 15</h3>
+        <p>11th Gen i3, 8GB, 256GB SSD, FHD</p>
+        <p><strong>₹38,499</strong></p>
+      </div>
+      <div class="product-card">
+        <a href="https://www.lenovo.com" target="_blank">
+          <img src="https://p2-ofp.static.pub//fes/cms/2023/07/17/cb33s6cv4scvgl4k2mxwpjhnmqfjgg628756.png" alt="Lenovo Ideapad Slim 3" />
+        </a>
+        <h3>Lenovo Ideapad Slim 3</h3>
+        <p>Intel i5, 16GB RAM, 512GB SSD</p>
+        <p><strong>₹52,000</strong></p>
+      </div>
+      <div class="product-card">
+        <a href="https://www.asus.com" target="_blank">
+          <img src="https://www.asus.com/media/global/gallery/eYBkyNxYxRL2RLjl_setting_xxx_0_90_end_2000.png" alt="ASUS VivoBook 14" />
+        </a>
+        <h3>ASUS VivoBook 14</h3>
+        <p>Intel i3, 8GB RAM, 256GB SSD</p>
+        <p><strong>₹34,999</strong></p>
+      </div>
+      <div class="product-card">
+        <a href="https://www.acer.com" target="_blank">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD9sr3AAi1rReSJFEN0LMPCvSD9FXlKtZhcTNodHDUvFE9V8dB-knVcg6O&s=10" alt="Acer Aspire 5" />
+        </a>
+        <h3>Acer Aspire 5</h3>
+        <p>12th Gen i5, 8GB RAM, 512GB SSD</p>
+        <p><strong>₹47,990</strong></p>
+      </div>
+      <div class="product-card">
+        <a href="https://www.msi.com" target="_blank">
+          <img src="https://images-cdn.ubuy.co.in/64c92c69993eed22c615f9ae-msi-modern-14-b10mw-014-14-ultra-thin.jpg" alt="MSI Modern 14" />
+        </a>
+        <h3>MSI Modern 14</h3>
+        <p>Ryzen 5, 8GB RAM, 512GB SSD</p>
+        <p><strong>₹49,990</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Zone | All rights reserved</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      // Save the theme preference to localStorage
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    // Apply the saved theme on page load
+    window.onload = function() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark');
+      } else {
+        document.body.classList.remove('dark');
+      }
+    };
+  </script>
+
+</body>
+</html>
